@@ -20,3 +20,12 @@
  ## Explicación  del código
 
 Explicare el código línea por línea del primer prototipo de automatización, ya que este lo programé de largo sin separar partes del código, entonces, creería que sería mas fácil explicar este primer código realizado.
+
+1. Establecemos el codigo
+```javascript
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```
