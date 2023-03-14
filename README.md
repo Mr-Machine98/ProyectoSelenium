@@ -68,9 +68,9 @@ String urlAllProd = driver.getCurrentUrl();
 int indexAllProd = 1;
 int listSizeProd = driver.findElements(By.xpath("//table[@id='tabela-empresas']/child::tbody/child::tr")).size();
 ```
-7. a.
+7. En este punto el programa lo que hace es recorrer empresa por empresa haciendo click en cada una de ellas, una vez dentro de la empresa, presiona el desplegable en donde abre sus producciones, las consulta todas y luego otra vez itera por esas producciones que tiene esa empresa, actualizando sus valores presionando el botón de guardar, una vez hecho eso, vuelve a la url de las empresas para repetir el proceso.
 ```java
-// Recorremos todos los producciones
+// Recorremos todos las producciones
 while (indexAllProd <= listSizeProd) {
 	String selector = "//table[@id='tabela-empresas']/child::tbody/child::tr[" + indexAllProd + "]";
 	System.out.println("	#" + indexAllProd + " Prod: " + driver.findElement(By.xpath(selector + "/child::td[2]")).getText() + "\n");
@@ -89,3 +89,43 @@ while (indexAllProd <= listSizeProd) {
 	indexAllProd++;
 }
 ```
+8. Aquí está el método en donde vuelve a iterar por cada producción que tiene una empresa.
+```java
+/**
+ * Método que ingresa producción por producción por cada empresa para actualizar los valores de
+* postulación.
+* 
+* @param driver El parámetro a utilizar para acceder a los elementos de la pág
+ *               web.
+ */
+public static void updateProd(WebDriver driver) {
+
+	// size de la lista de producciones
+	int cantidadProdTodas = driver.findElements(By.xpath("//table[@id='tabela-producao']/child::tbody/child::tr")).size();
+	// Obtenemos la url de todos los proyectos por campaña
+	String urlAllProyectos = driver.getCurrentUrl();
+
+	// Iteramos por todos proyectos
+	for (int i = 1; i <= cantidadProdTodas; i++) {
+
+		String selector = "//table[@id='tabela-producao']/child::tbody/child::tr[" + i + "]";
+		String estadoProyecto = driver.findElement(By.xpath(selector + "/child::td[4]")).getText();
+		System.out.println("		#" + i + " Estado del Proyecto: " + estadoProyecto + "\n");
+
+		// Clic al botón para acceder al proyecto
+		driver.findElement(By.xpath(selector + "/child::td[9]/child::a")).click();
+
+		// Clic en etapa de postulación 
+		driver.findElement(By.xpath("//table[@id='tabela-etapas']/child::tbody[3]/child::tr/child::td[2]/a")).click();
+
+		// Clic en el boton guardar para persistir los datos nuevos a la bd. 
+		driver.findElement(By.xpath("//button[@id='salvar']")).click();
+			
+		driver.navigate().to(urlAllProyectos);
+
+		// clic en el desplegable de producción
+		clicCollapsibleProd(driver);
+	}
+}
+```
+10. 
