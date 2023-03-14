@@ -9,5 +9,4 @@
  - Este código es de prueba, en los paquetes o carpetas de Test es la forma adecuada.
   
  > @author: Juan Camilo Mamian Ruiz
- >
  > @version: 1.0.0
