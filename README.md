@@ -45,3 +45,11 @@ driver.get("https://co-fseweb.fi-group.com/login");
 String usr = Credenciales.USERNAME;
 String pass = Credenciales.PASSWORD;
 ```
+4. Buscamos los elementos presentes en el navegador, en este caso son los inputs de las credenciales y le damos click al botón entrar para ingresar.
+```java
+// Buscamos los inputs y establecemos las credenciales
+driver.findElement(By.id("username")).sendKeys(usr);
+driver.findElement(By.id("senha")).sendKeys(pass);
+// Click al btn entrar para ingresar
+driver.findElement(By.id("btn-entrar")).click();
+```
