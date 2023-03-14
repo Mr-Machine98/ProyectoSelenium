@@ -68,3 +68,24 @@ String urlAllProd = driver.getCurrentUrl();
 int indexAllProd = 1;
 int listSizeProd = driver.findElements(By.xpath("//table[@id='tabela-empresas']/child::tbody/child::tr")).size();
 ```
+7. a.
+```java
+// Recorremos todos los producciones
+while (indexAllProd <= listSizeProd) {
+	String selector = "//table[@id='tabela-empresas']/child::tbody/child::tr[" + indexAllProd + "]";
+	System.out.println("	#" + indexAllProd + " Prod: " + driver.findElement(By.xpath(selector + "/child::td[2]")).getText() + "\n");
+
+	// Seleccionamos los btn y presionamos clic
+	driver.findElement(By.xpath(selector + "/child::td[3]/child::a")).click();
+
+	// clic en el desplegable de producción
+	clicCollapsibleProd(driver);
+
+	// Actualizar los valores de postulación
+	updateProd(driver);
+
+	// Volver a los producciones
+	driver.navigate().to(urlAllProd);
+	indexAllProd++;
+}
+```
