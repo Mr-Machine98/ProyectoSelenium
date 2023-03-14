@@ -25,9 +25,9 @@ Explicare el código línea por línea del primer prototipo de automatización, 
 ```java
 System.setProperty("webdriver.chrome.driver",
 				"C:\\Mr_Machine\\Programacion\\WebDrivers\\chromeWebDriver\\chromedriver.exe");
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--remote-allow-origins=*");
-		WebDriver driver = new ChromeDriver(options);
+ChromeOptions options = new ChromeOptions();
+options.addArguments("--remote-allow-origins=*");
+WebDriver driver = new ChromeDriver(options);
 ```
 2. Establecemos el tiempo de respuesta que el controlador tiene para encontrar algún elemento en concreto o esperar para el retorno de información del backend, maximizamos la ventana, y le pasamos la url de la app.
 ```java
@@ -42,6 +42,6 @@ driver.get("https://co-fseweb.fi-group.com/login");
 
 ```java 
 // Credenciales para ingresar a la app
-		String usr = Credenciales.USERNAME;
-		String pass = Credenciales.PASSWORD;
+String usr = Credenciales.USERNAME;
+String pass = Credenciales.PASSWORD;
 ```
