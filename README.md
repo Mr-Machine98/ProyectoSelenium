@@ -38,3 +38,10 @@ driver.manage().window().maximize();
 // acceder a la pág, pasamos la URL
 driver.get("https://co-fseweb.fi-group.com/login");
 ```
+3. Establecemos las crendenciales para ingresar a la App, pero Obvio 🤦‍♂️🤦‍♂️🤦‍♂️ que no colocare las credenciales en este reporitorio me hechan de mi trabajo jajaj.
+
+```java 
+// Credenciales para ingresar a la app
+		String usr = Credenciales.USERNAME;
+		String pass = Credenciales.PASSWORD;
+```
