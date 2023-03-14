@@ -29,3 +29,12 @@ System.setProperty("webdriver.chrome.driver",
 		options.addArguments("--remote-allow-origins=*");
 		WebDriver driver = new ChromeDriver(options);
 ```
+2. Establecemos el tiempo de respuesta que el controlador tiene para encontrar algún elemento en concreto o esperar para el retorno de información del backend, maximizamos la ventana, y le pasamos la url de la app.
+```java
+// Establecemos al controlador que espere n tiempo cuando el tiempo de respuesta de la app se demore.
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+// Maximizar la ventana
+driver.manage().window().maximize();
+// acceder a la pág, pasamos la URL
+driver.get("https://co-fseweb.fi-group.com/login");
+```
