@@ -53,7 +53,7 @@ driver.findElement(By.id("senha")).sendKeys(pass);
 // Click al btn entrar para ingresar
 driver.findElement(By.id("btn-entrar")).click();
 ```
-5. Navegamos por la app, buscando el menú, y encontramos el botón desplegable consultoría y luego click en el item postulación. 
+5. Navegamos por la app, buscando el menú, encontramos el botón desplegable consultoría y luego click en el item postulación. 
 ```java
 // Click al btn menu para ingresar al menu
 driver.findElement(By.id("menu")).click();
@@ -61,5 +61,4 @@ driver.findElement(By.id("menu")).click();
 driver.findElement(By.xpath("//a[text()='Consultoría ']")).click();
 // Click al btn Produccio'n
 driver.findElement(By.xpath("//a[text()='Producción']")).click();
-
 ```
