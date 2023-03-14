@@ -16,3 +16,7 @@
  >> ![Alt text](http://knorrium.info/wp-content/uploads/2010/11/testng-report.png)
  >> 
  >  ***Note:*** Estos reportes los encontramos en la carpeta del proyecto ***test-output***.
+ 
+ ## Explicación  del código
+
+Explicare el código línea por línea del primer prototipo de automatización, ya que este lo programé de largo sin separar partes del código, entonces, creería que sería mas fácil explicar este primer código realizado.
