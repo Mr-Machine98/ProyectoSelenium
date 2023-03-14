@@ -128,4 +128,8 @@ public static void updateProd(WebDriver driver) {
 	}
 }
 ```
-10. 
+10. al final cerramos el navegador.
+```java
+// Cerramos la ventana, el programa termino'
+driver.quit();
+```
