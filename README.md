@@ -11,4 +11,4 @@
  > @author: Juan Camilo Mamian Ruiz
  >
  > @version: 1.0.0
- >> **Note:** El paquete **com.mrmachine.test;** contiene el **@Test testButtonProducciones**, en donde es la mejor manera de utilizar Selenium, permite ver logs de información en donde nos muestra lo que está pasando con los **@Test**, además, de generar reportes de fallos, como por ejemplo en la siguiente imágen.
+ >> ***Note:*** El paquete ***com.mrmachine.test;*** contiene el ***@Test testButtonProducciones***, en donde es la mejor manera de utilizar Selenium, permite ver logs de información en donde nos muestra lo que está pasando con los ***@Test***, además, de generar reportes de fallos, como por ejemplo en la siguiente imágen.
