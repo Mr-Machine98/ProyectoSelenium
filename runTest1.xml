@@ -1,0 +1,21 @@
+<suite name="Test Botones Actualizar Producciones">
+
+	<!-- Archivo principal para ejecutar el programa -->
+
+	<!-- Parámetros para establecer en el controlador -->
+	<parameters>
+		<parameter name="usarbrowser" value ="Chrome"></parameter>
+		<parameter name="pathbrowsercontroller" value ="C:\\Mr_Machine\\Programacion\\WebDrivers\\chromeWebDriver\\chromedriver.exe"></parameter>
+	</parameters>
+
+	<!-- Test a ejecutar -->
+	<test name="Lanzamiento 2023.13 Test Btn Producciones">
+		<classes>
+			<class name="com.mrmachine.test.TestsFSEWeb1">
+			
+			</class>
+		</classes>
+	</test>
+	
+	
+</suite>

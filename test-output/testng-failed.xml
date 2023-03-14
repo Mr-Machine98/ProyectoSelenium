@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.mrmachine.test.TestsFSEWeb1">
+        <methods>
+          <include name="testButtonProducciones"/>
+          <include name="endTest"/>
+          <include name="initTest"/>
+        </methods>
+      </class> <!-- com.mrmachine.test.TestsFSEWeb1 -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
