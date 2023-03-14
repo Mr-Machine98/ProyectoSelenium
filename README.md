@@ -62,3 +62,9 @@ driver.findElement(By.xpath("//a[text()='Consultoría ']")).click();
 // Click al btn Produccio'n
 driver.findElement(By.xpath("//a[text()='Producción']")).click();
 ```
+6. En este punto obtenemos la url de las empresas que tienen producciones, la razón, porque cada vez que consultemos una por una, debemos devolvernos en donde se encuentran todas para ir seleccionando cada una de ellas, creamos un indice para utilizarlo en un while, y miramos cauntas empresas tienen producciones. 
+```java
+String urlAllProd = driver.getCurrentUrl();
+int indexAllProd = 1;
+int listSizeProd = driver.findElements(By.xpath("//table[@id='tabela-empresas']/child::tbody/child::tr")).size();
+```
