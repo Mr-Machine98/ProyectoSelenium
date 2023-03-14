@@ -21,7 +21,7 @@
 
 Explicare el código línea por línea del primer prototipo de automatización, ya que este lo programé de largo sin separar partes del código, entonces, creería que sería mas fácil explicar este primer código realizado.
 
-1. Establecemos el controlador y le decimos donde se encuentra en el equipo, y damos permisos para conexiones remotas:
+1. Establecemos el controlador y le decimos donde se encuentra en el equipo, y damos permisos para conexiones remotas.
 ```java
 System.setProperty("webdriver.chrome.driver",
 				"C:\\Mr_Machine\\Programacion\\WebDrivers\\chromeWebDriver\\chromedriver.exe");
@@ -38,7 +38,7 @@ driver.manage().window().maximize();
 // acceder a la pág, pasamos la URL
 driver.get("https://co-fseweb.fi-group.com/login");
 ```
-3. Establecemos las crendenciales para ingresar a la App, pero Obvio 🤦‍♂️🤦‍♂️🤦‍♂️ que no colocare las credenciales en este reporitorio me hechan de mi trabajo jajaj.
+3. Establecemos las crendenciales para ingresar a la App, pero Obvio 🤦‍♂️🤦‍♂️🤦‍♂️ que no colocare las credenciales en este repositorio me hechan de mi trabajo jajaj.
 
 ```java 
 // Credenciales para ingresar a la app
@@ -52,4 +52,14 @@ driver.findElement(By.id("username")).sendKeys(usr);
 driver.findElement(By.id("senha")).sendKeys(pass);
 // Click al btn entrar para ingresar
 driver.findElement(By.id("btn-entrar")).click();
+```
+5. Navegamos por la app, buscando el menú, y encontramos el botón desplegable consultoría y luego click en el item postulación. 
+```java
+// Click al btn menu para ingresar al menu
+driver.findElement(By.id("menu")).click();
+// Click al btn Consultori'a
+driver.findElement(By.xpath("//a[text()='Consultoría ']")).click();
+// Click al btn Produccio'n
+driver.findElement(By.xpath("//a[text()='Producción']")).click();
+
 ```
